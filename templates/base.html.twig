@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@300&family=Roboto&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+
+<div class="container">
+
+    <div class="wrapper-phone">
+
+        <!-- section-one-start -->
+        <div class="card-left">
+
+            <div class="icon">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="title">
+                <h3>Espace Patient</h3>
+            </div>
+            <div class="caption">
+
+                <div class="button">
+                    <button type="submit">Connexion</button>
+                    <button type="submit">Urgence</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- section-one-end -->
+    <div class="wrapper-tv">
+        <div class="card-right">
+            <div class="icon">
+                <i class="fa fa-user-md"></i>
+            </div>
+            <div class="title">
+                <h3>Espace Professionnel</h3>
+            </div>
+            <div class="caption">
+
+                <div class="button">
+                    <button type="submit">Connexion</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #e8e8f6;
+        font-family: Merriweather;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+
+    }
+
+    /* card-left-start */
+    .wrapper-phone {
+        width: 416px;
+        height: 449px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px 50px ;
+        margin: auto;
+        border: 1px solid rgb(255, 104, 167);
+    }
+    .wrapper-phone:hover{
+        box-shadow: rgba(255, 104, 167, 0.1) 0px 60px 40px -7px;
+
+    }
+    .card-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-left .icon {
+
+        width: 74px;
+        position: relative;
+        height: 74px;
+        border-radius: 50%;
+        background-color: rgb(255, 104, 167);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 10px rgba(255, 104, 167, 0.5);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .card-left .icon i{
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+    }
+    .card-left .title h3 {
+        text-align: center;
+        padding: 10px 51px;
+    }
+    .card-left .caption p {
+        padding: 5px 20px ;
+        text-align: center;
+
+    }
+    .card-left .button{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+
+    }
+    .card-left .button button {
+        border: 0;
+        width: 104px;
+        height: 52px;
+        border-radius: 24px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #e02e79;
+        background-color: #ffe8f1;
+        margin:5px;
+    }
+    .card-left .button button:hover{
+        border: 1px solid #e02e79;
+
+    }
+
+    /* card-left-end */
+    /* card-right-start */
+    .wrapper-tv {
+        width: 416px;
+        height: 449px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px 50px ;
+        margin: auto;
+        border: 1px solid #68a4ff;
+    }
+    .wrapper-tv:hover{
+        box-shadow: rgba(104, 164, 255, 0.1) 0px 60px 40px -7px;
+    }
+    .card-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-right .icon {
+
+        width: 74px;
+        position: relative;
+        height: 74px;
+        border-radius: 50%;
+        background-color: rgb(104, 164, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 10px rgba(104, 164, 255, 0.5);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .card-right .icon i{
+        position: absolute;
+        font-size: 30px;
+        color: #fff;
+    }
+    .card-right .title h3 {
+        text-align: center;
+        padding: 10px 51px;
+    }
+    .card-right .caption p {
+        padding: 5px 20px ;
+        text-align: center;
+
+    }
+    .card-right .button{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .card-right .button button {
+        border: 0;
+        width: 104px;
+        height: 52px;
+        border-radius: 24px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        color: #1b65d6;
+        background-color: #edf4ff;
+
+    }
+    .card-right .button button:hover{
+        border: 1px solid #1b65d6;
+    }
+
+    /* card-right-end */
+    @media only screen and (max-width: 600px) {
+        .container {
+            flex-direction:column;
+            margin:80px auto;
+        }
+        .wrapper-tv{
+            margin:50px auto;
+        }
+
+    }
+
+</style>
