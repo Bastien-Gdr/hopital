@@ -37,7 +37,7 @@
             <div class="caption">
 
                 <div class="button">
-                    <button type="submit">Connexion</button>
+                    <button type="submit"><a href={{ path('app_default_formulaire') }}>Connexion</a></button>
                     <button type="submit">Urgence</button>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="caption">
 
                 <div class="button">
-                    <button type="submit">Connexion</button>
+                    <button type="submit"><a class = "a" href={{ path('app_default_pro') }}>Connexion</a></button>
                 </div>
             </div>
         </div>
@@ -69,6 +69,16 @@
 
 
 <style>
+
+    a{
+        text-decoration: none;
+        color:#e02e79;
+    }
+
+    .a{
+        text-decoration: none;
+        color:#68a4ff;
+    }
     * {
         margin: 0;
         padding: 0;
