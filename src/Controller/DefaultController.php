@@ -11,10 +11,22 @@ class DefaultController extends AbstractController
     {
         return  $this->render('base.html.twig');
     }
-    #[Route('/formulaire', name: 'about')]
+    #[Route('/formulaire', name: 'formulaire')]
     public function aboutAction(): Response
     {
         return  $this->render('formulaire.html.twig');
+    }
+
+    #[Route('/pro', name: 'pro')]
+    public function aboutA(): Response
+    {
+        return  $this->render('pro.html.twig');
+    }
+
+    #[Route('/index', name: 'index')]
+    public function index(): Response
+    {
+        return  $this->render('index.html.twig');
     }
 
 }
