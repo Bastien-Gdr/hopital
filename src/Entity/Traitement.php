@@ -13,10 +13,40 @@ class Traitement
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\ManyToOne(inversedBy: 'traitements')]
+    private ?medicament $idMedicament = null;
+
+    #[ORM\ManyToOne(inversedBy: 'traitements')]
+    private ?statutTraitement $idStatutTraitement = null;
+
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getIdMedicament(): ?medicament
+    {
+        return $this->idMedicament;
+    }
+
+    public function setIdMedicament(?medicament $idMedicament): static
+    {
+        $this->idMedicament = $idMedicament;
+
+        return $this;
+    }
+
+    public function getIdStatutTraitement(): ?statutTraitement
+    {
+        return $this->idStatutTraitement;
+    }
+
+    public function setIdStatutTraitement(?statutTraitement $idStatutTraitement): static
+    {
+        $this->idStatutTraitement = $idStatutTraitement;
+
+        return $this;
     }
 
 }
