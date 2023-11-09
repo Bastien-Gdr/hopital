@@ -20,16 +20,27 @@
                 <h1 class="logo">Espace Patient</h1>
 
 
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déco</a>
+                        </div>
+                    {% endif %}
 
-                <input type="email" value="TEST" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Adresse mail" required autofocus>
-                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Mot de passe" required>
+                        <input type="email" value="TEST" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Adresse mail" required autofocus>
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Mot de passe" required>
+
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+
+                <button class="login" type="submit">Connexion</button>
+
+                <a href="#">Mot de passe oublié ?</a>
 
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                <button class="login">Connexion</button>
 
-                <a href="#">Mot de passe oublié ?</a>
 
            {#{% if error %}
                     <div class="primary alert alert-danger ">Indentifiant ou mot de passe incorrect</div>
@@ -51,6 +62,7 @@
     </body>
     </html>
 {% endblock %}
+
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
