@@ -24,6 +24,9 @@ class Salle
     #[ORM\ManyToOne(inversedBy: 'salles')]
     private ?typeSalle $idTypeSalle = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?position $idPosition = null;
+
     public function __construct()
     {
         $this->lits = new ArrayCollection();
@@ -84,6 +87,18 @@ class Salle
     public function setIdTypeSalle(?typeSalle $idTypeSalle): static
     {
         $this->idTypeSalle = $idTypeSalle;
+
+        return $this;
+    }
+
+    public function getIdPosition(): ?position
+    {
+        return $this->idPosition;
+    }
+
+    public function setIdPosition(?position $idPosition): static
+    {
+        $this->idPosition = $idPosition;
 
         return $this;
     }

@@ -23,6 +23,9 @@ class Position
     #[ORM\Column]
     private ?int $distanceMetre = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?ailePosition $idAilePosition = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +63,18 @@ class Position
     public function setDistanceMetre(int $distanceMetre): static
     {
         $this->distanceMetre = $distanceMetre;
+
+        return $this;
+    }
+
+    public function getIdAilePosition(): ?ailePosition
+    {
+        return $this->idAilePosition;
+    }
+
+    public function setIdAilePosition(?ailePosition $idAilePosition): static
+    {
+        $this->idAilePosition = $idAilePosition;
 
         return $this;
     }
