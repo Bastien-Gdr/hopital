@@ -16,6 +16,9 @@ class DetecteurRFID
     #[ORM\Column]
     private ?int $numRFID = null;
 
+    #[ORM\OneToOne(inversedBy: 'detecteurrfid', cascade: ['persist', 'remove'])]
+    private ?lit $idLit = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,18 @@ class DetecteurRFID
     public function setNumRFID(int $numRFID): static
     {
         $this->numRFID = $numRFID;
+
+        return $this;
+    }
+
+    public function getIdLit(): ?lit
+    {
+        return $this->idLit;
+    }
+
+    public function setIdLit(?lit $idLit): static
+    {
+        $this->idLit = $idLit;
 
         return $this;
     }
