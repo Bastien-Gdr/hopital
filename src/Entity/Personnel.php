@@ -35,11 +35,6 @@ class Personnel
     #[ORM\Column]
     private ?int $sexePersonnel = null;
 
-    #[ORM\Column]
-    private ?int $idUtilisateur = null;
-
-    #[ORM\Column]
-    private ?int $idService = null;
 
     public function getId(): ?int
     {
@@ -130,27 +125,4 @@ class Personnel
         return $this;
     }
 
-    public function getIdUtilisateur(): ?int
-    {
-        return $this->idUtilisateur;
-    }
-
-    public function setIdUtilisateur(int $idUtilisateur): static
-    {
-        $this->idUtilisateur = $idUtilisateur;
-
-        return $this;
-    }
-
-    public function getIdService(): ?int
-    {
-        return $this->idService;
-    }
-
-    public function setIdService(int $idService): static
-    {
-        $this->idService = $idService;
-
-        return $this;
-    }
 }

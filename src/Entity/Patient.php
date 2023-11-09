@@ -32,8 +32,6 @@ class Patient
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $dateDeNaissancePatient = null;
 
-    #[ORM\Column]
-    private ?int $idUtilisateur = null;
 
     #[ORM\Column]
     private ?int $sexePatient = null;
@@ -111,18 +109,6 @@ class Patient
     public function setDateDeNaissancePatient(\DateTimeInterface $dateDeNaissancePatient): static
     {
         $this->dateDeNaissancePatient = $dateDeNaissancePatient;
-
-        return $this;
-    }
-
-    public function getIdUtilisateur(): ?int
-    {
-        return $this->idUtilisateur;
-    }
-
-    public function setIdUtilisateur(int $idUtilisateur): static
-    {
-        $this->idUtilisateur = $idUtilisateur;
 
         return $this;
     }

@@ -16,8 +16,6 @@ class Stock
     #[ORM\Column]
     private ?int $quantiteMedicamentStock = null;
 
-    #[ORM\Column]
-    private ?int $idMedicament = null;
 
     public function getId(): ?int
     {
@@ -36,15 +34,4 @@ class Stock
         return $this;
     }
 
-    public function getIdMedicament(): ?int
-    {
-        return $this->idMedicament;
-    }
-
-    public function setIdMedicament(int $idMedicament): static
-    {
-        $this->idMedicament = $idMedicament;
-
-        return $this;
-    }
 }

@@ -13,8 +13,6 @@ class Position
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private ?int $ailePosition = null;
 
     #[ORM\Column]
     private ?int $etagePosition = null;
@@ -28,18 +26,6 @@ class Position
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getAilePosition(): ?int
-    {
-        return $this->ailePosition;
-    }
-
-    public function setAilePosition(int $ailePosition): static
-    {
-        $this->ailePosition = $ailePosition;
-
-        return $this;
     }
 
     public function getEtagePosition(): ?int
