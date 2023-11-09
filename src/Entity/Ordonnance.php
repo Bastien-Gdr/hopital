@@ -17,12 +17,6 @@ class Ordonnance
     #[ORM\Column(type: Types::TEXT)]
     private ?string $detailOrdonnance = null;
 
-    #[ORM\Column]
-    private ?int $idPatient = null;
-
-    #[ORM\Column]
-    private ?int $idPersonnel = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -40,27 +34,4 @@ class Ordonnance
         return $this;
     }
 
-    public function getIdPatient(): ?int
-    {
-        return $this->idPatient;
-    }
-
-    public function setIdPatient(int $idPatient): static
-    {
-        $this->idPatient = $idPatient;
-
-        return $this;
-    }
-
-    public function getIdPersonnel(): ?int
-    {
-        return $this->idPersonnel;
-    }
-
-    public function setIdPersonnel(int $idPersonnel): static
-    {
-        $this->idPersonnel = $idPersonnel;
-
-        return $this;
-    }
 }

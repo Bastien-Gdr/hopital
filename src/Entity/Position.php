@@ -13,14 +13,12 @@ class Position
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private ?int $ailePosition = null;
 
     #[ORM\Column]
     private ?int $etagePosition = null;
 
     #[ORM\Column]
-    private ?bool $codePosition = null;
+    private ?bool $cotePosition = null;
 
     #[ORM\Column]
     private ?int $distanceMetre = null;
@@ -28,18 +26,6 @@ class Position
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getAilePosition(): ?int
-    {
-        return $this->ailePosition;
-    }
-
-    public function setAilePosition(int $ailePosition): static
-    {
-        $this->ailePosition = $ailePosition;
-
-        return $this;
     }
 
     public function getEtagePosition(): ?int
@@ -54,14 +40,14 @@ class Position
         return $this;
     }
 
-    public function isCodePosition(): ?bool
+    public function isCotePosition(): ?bool
     {
-        return $this->codePosition;
+        return $this->cotePosition;
     }
 
-    public function setCodePosition(bool $codePosition): static
+    public function setCotetosition(bool $cotePosition): static
     {
-        $this->codePosition = $codePosition;
+        $this->cotePosition = $cotePosition;
 
         return $this;
     }

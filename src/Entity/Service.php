@@ -16,9 +16,6 @@ class Service
     #[ORM\Column(length: 255)]
     private ?string $nomService = null;
 
-    #[ORM\Column]
-    private ?int $idPosition = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -36,15 +33,4 @@ class Service
         return $this;
     }
 
-    public function getIdPosition(): ?int
-    {
-        return $this->idPosition;
-    }
-
-    public function setIdPosition(int $idPosition): static
-    {
-        $this->idPosition = $idPosition;
-
-        return $this;
-    }
 }
